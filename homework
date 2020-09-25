@@ -1,0 +1,120 @@
+// Задача 1
+function func1(a,b){
+  console.log('Задача 1');
+  let n;
+  if (a > b){
+    n = a - b;
+    console.log(`Число ${a} > ${b} на ${n}`);
+  }
+  else if (b > a){
+    n = b - a;
+    console.log(`Число ${b} > ${a} на ${n}`);
+  }
+  else{
+    console.log("Число a и b равны");
+  }
+}  
+
+func1(634,132);
+
+// Задача 2
+
+let arrn = ["Саша", "Андрей", "Олег","Юлия", "Ксения", "Артём"];
+function func2(a){
+  console.log('Задача 2');
+  console.log(arrn.sort());
+}
+
+func2(arrn);
+
+// Задание 3
+
+let arrnu = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+function func3(arr){
+  console.log('Задача 3');
+  let n = arrnu.length;
+  for(let i = 0; i < n; i++){
+    if(Math.pow(arrnu[i],2) > 20 && Math.pow(arrnu[i],2) < 100){
+    arrnu.push(arrnu[i]);
+    }
+  }
+  arrnu.splice(0,n);
+  console.log(arrnu);
+}
+
+func3(arrnu);
+
+// Задача 4
+
+function func4(a){
+  console.log('Задача 4');
+  for(let i = 1; i < 26; i++){
+    console.log(`${a} ${i}`);
+  }
+}
+
+func4("Я номер");
+
+// Задача 5
+
+let arr5 = [10,20,30,40,50,60,70];
+function func5(arr5){
+  console.log('Задача 5');
+  let min = arr5[0];
+  for(let i = 0; i < arr5.length; i++){
+    for(let j = i+1; j < arr5.length; j++){
+      if(arr5[i]>arr5[j]){
+         min = arr5[j];
+         arr5[j] = arr5[i];
+         arr5[i] = min;
+      }
+    }
+  }
+  console.log("Отсортированный массив: " + arr5);
+}
+
+func5(arr5);
+
+// Задача 6
+
+let name6 = "Саша";
+function task6(arr6){
+  console.log('Задание 6');
+  newname6 = name6.split('');
+  console.log(newname6);
+}
+
+task6(name6);
+
+// Задача 7
+
+let arr7 = [1,2,3,4];
+function func7(arr7){
+  console.log('Задача 7');
+  let sum = 0;
+  for(let i = 0; i < arr7.length; i++){
+    sum+=arr7[i];
+  }
+  console.log("Сумма = " + sum);
+}
+
+func7(arr7);
+
+// Задача 8
+
+let string8 = "LUL";
+function func8(string){
+  console.log('Задача 8');
+  console.log(`Строка - |LUL| имеет ${string8.length} символов`);
+}
+func8(string8);
+// Задание 9
+
+let string9 = "Say my name";
+function func9(name,n){
+console.log('Задание 9');
+for(let i = 0; i < n; i++){
+console.log(name);
+}
+}
+func9(string9,9);

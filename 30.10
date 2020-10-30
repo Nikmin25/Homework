@@ -1,0 +1,32 @@
+let cust = [];
+class CustomArray{
+  constructor(numbers){
+    this.numer = numbers; 
+  }                 
+  method1(){                                     
+    cust.unshift(this.numer);
+    console.log(this.numer);
+    console.log(cust);
+  }
+  method2(){                                    
+    cust.push(this.numer);
+    console.log(this.numer);
+    console.log(cust);
+  }
+  method3(){                                    
+    cust.pop();
+    console.log(cust);
+  }
+}
+let numer1 = new CustomArray(2);
+numer1.method2();
+let numer2 = new CustomArray(4);
+numer2.method1();
+let numer3 = new CustomArray(6);
+numer3.method1();
+numer3.method3();
+let numer4 = new CustomArray(8);
+numer4.method1();
+let numer5 = new CustomArray(16);
+numer5.method2();
+numer5.method3();

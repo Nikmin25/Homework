@@ -1,0 +1,18 @@
+let array = [10,9,8,7,6,5,4,3,2,1,0];
+function whi(arr){
+  let i = 0;
+  while(i < array.length){
+    console.log([arr[i]]);
+    i++;
+  }
+  console.log("Выведено с помощью цикла while");
+}
+whi(array);
+function rec(arr,i){
+  if(i<array.length){
+  console.log([arr[i]]);
+  rec(array,i+1);
+  }
+}
+rec(array,i=0);
+console.log("Выводено с помощью рекурсии");

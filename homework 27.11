@@ -1,0 +1,42 @@
+array = [-11,-1,111,22,33,-44,666];
+
+function move(array, first, second){
+    const i = array[first];
+    array[first] = array[second];
+    array[second] = i;
+}
+
+function dvizh(array, left, right) {
+    var floating   = array[Math.floor((right + left) / 2)];
+    while (left <= right) {
+        while (array[left] < floating) {
+            left++;
+        }
+        while (array[right] > floating) {
+            right--;
+        }
+        if (left <= right) {
+            move(array, left, right);
+            left++;
+            right--;
+        }
+    }
+    return left;
+}
+
+function sortirovka(array, left, right) {
+    var index;
+    if (array.length > 1) {
+        index = dvizh(array, left, right);
+        if (left < index - 1) {
+            sortirovka(array, left, index - 1);
+        }
+        if (index < right) {
+            sortirovka(array, index, right);
+        }
+    }
+    return array;
+}
+
+var result = sortirovka(array, 0, array.length - 1);
+console.log(array);
